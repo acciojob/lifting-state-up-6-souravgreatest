@@ -7,11 +7,7 @@ const TodoList = ({ arr, handleComplete }) => {
       <ul>
         {arr.map((item, index) => (
           <li key={index}>
-            <span
-              style={{
-                textDecoration: item.completed ? "line-through" : "none",
-              }}
-            >
+            <span>
               {item.text}
             </span>
             {!item.completed && (
