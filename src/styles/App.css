@@ -1,1 +1,24 @@
-
+/* Center the entire content */
+body, html {
+    /* height: 100%;
+    margin: 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  div {
+    text-align: center;
+  }
+  
+  h3 {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
