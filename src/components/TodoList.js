@@ -1,24 +1,16 @@
 import React from "react";
+import "./../styles/App.css";
 
-const TodoList = ({ arr, handleComplete }) => {
+const TodoList = ({ todos, handleComplete }) => {
   return (
     <div>
-      <h2>Child Component</h2>
-      <ul>
-        {arr.map((item, index) => (
-          <li key={index}>
-            {/* <span>{item.text}</span> */}
-            {item.text}
-            {!item.completed && <button
-              onClick={() => handleComplete(index)}
-            >
-              Complete
-            </button>}
-          </li>
-        ))}
-      </ul>
+      {todos.map((todo, index) => (
+        <li key={index}>
+          {todo.todo} {!todo.state && <button onClick={()=>handleComplete(index)}>Complete</button>}
+        </li>
+      ))}
     </div>
   );
 };
 
-export default TodoList;
+export default TodoList
