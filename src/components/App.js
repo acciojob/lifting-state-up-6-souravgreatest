@@ -12,7 +12,7 @@ const App = () => {
   const handleComplete = (index) => {
     const updatedTodos = [...todos];
     updatedTodos[index].completed = true;
-    setTodos(updatedTodos); // Update the state
+    setTodos(updatedTodos);
   };
 
   return (
@@ -24,13 +24,3 @@ const App = () => {
 };
 
 export default App;
-
-
-/*
-const [todos,setTodos]=useState([
-  {text:"Learn React",completed:false},
-  {text:"Build a React app",completed:false},
-  {text:"Deploy the React app",completed:false}
-]);
-
-*/

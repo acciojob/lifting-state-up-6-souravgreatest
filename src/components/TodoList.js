@@ -7,12 +7,13 @@ const TodoList = ({ arr, handleComplete }) => {
       <ul>
         {arr.map((item, index) => (
           <li key={index}>
-            <span>
-              {item.text}
-            </span>
-            {!item.completed && (
-              <button onClick={() => handleComplete(index)}>Complete</button>
-            )}
+            <span>{item.text}</span>
+            <button
+              onClick={() => handleComplete(index)}
+              style={{ display: item.completed ? "none" : "inline" }}
+            >
+              Complete
+            </button>
           </li>
         ))}
       </ul>
